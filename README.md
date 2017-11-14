@@ -8,4 +8,4 @@
 ### Run
   * Place a bot token from the BotFather into config.conf
   * Run Python v3.5 from the project's root directory ```python -m bot```
-  * Send /start command to the bot
+  * Send /menu command to the bot

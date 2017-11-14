@@ -54,7 +54,11 @@ class DB:
 
     @classmethod
     def orders(cls, telegram_id):
-        return Employee.select(Dish.name, EmployeeOrder.id, EmployeeOrder.order_date, EmployeeOrderDish.dish_price, EmployeeOrderDish.dish_quantity) \
+        return Employee.select(Dish.name,
+                               EmployeeOrder.id,
+                               EmployeeOrder.order_date,
+                               EmployeeOrderDish.dish_price,
+                               EmployeeOrderDish.dish_quantity)\
             .join(EmployeeOrder) \
             .join(EmployeeOrderDish) \
             .join(Dish) \
@@ -92,8 +96,6 @@ class DB:
                 prev_id = id
             prev_quantity += 1
         yield (prev_quantity, cls.dish(prev_id))
-
-
 
     @staticmethod
     def _create_category_with_dishes(category_name, dishes):

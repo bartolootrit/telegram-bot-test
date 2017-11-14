@@ -17,8 +17,6 @@ class Bot:
 
     @classmethod
     def menu_handler(cls, bot, update):
-        # markup = tel.ReplyKeyboardMarkup([list(DB.menu())], resize_keyboard=True, one_time_keyboard=True)
-        # bot.send_message(chat_id=update.message.chat_id, text='Make a choiсe', reply_markup=markup)
         if update.message.from_user.is_bot:
             bot.send_message(chat_id=update.message.chat_id, text="Orders from bots aren't supported")
             return
